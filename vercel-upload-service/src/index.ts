@@ -24,6 +24,7 @@ app.post("/deploy",async (req,res)=>{
     })
     //  console.log(__dirname);
     publisher.lPush("build-queue",id);
+    publisher.hSet("status",id,"uploaded")
      res.json({
         id:id
      })
