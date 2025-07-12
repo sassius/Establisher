@@ -6,6 +6,8 @@ import path from "path"
 import { getAllFiles } from "./file";
 import { uploadFile } from "./aws";
 import {createClient} from "redis";
+// require('dotenv').config();
+
 const publisher=createClient();
 publisher.connect();
 
